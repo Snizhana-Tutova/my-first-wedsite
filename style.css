@@ -1,0 +1,291 @@
+/* --- Скидання стилів та змінні дизайн-системи --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-main: #2C2F33;         /* Матовий графіт (фон) */
+    --bg-card: #393D44;         /* Темна сталь (картки та поверхні) */
+    --text-primary: #DCDDDE;    /* Димчастий білий (основний текст) */
+    --text-secondary: #9BA0A5;  /* Попелясто-сірий (другорядний текст) */
+    --accent: #7A6C82;          /* Приглушений аметист (акцент/кнопки) */
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Шапка сайту (Header) --- */
+.site-header {
+    border-bottom: 1px solid rgba(220, 221, 222, 0.1);
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+/* --- Головний заголовок сайту --- */
+.hero-section {
+    text-align: center;
+    padding: 40px 0 20px 0;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* --- Сітка карток на головній сторінці (Grid) --- */
+.books-section {
+    padding: 20px 0 60px 0;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.book-card {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--accent);
+}
+
+.card-author-top {
+    padding: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background-color: #1f2124;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title-bottom {
+    padding: 15px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: auto;
+}
+
+/* --- Сторінка детального опису книги (Flexbox) --- */
+.detail-section {
+    padding: 40px 0 60px 0;
+}
+
+.detail-layout {
+    display: flex;
+    gap: 40px;
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 12px;
+    align-items: flex-start;
+}
+
+.detail-img-wrapper {
+    flex: 0 0 350px;
+    height: 520px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.detail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detail-book-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.meta-info {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.meta-info span {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.section-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 8px;
+}
+
+.description-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    white-space: pre-line;
+}
+
+.review-box {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-style: italic;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+}
+
+/* --- Кнопки дій --- */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: var(--accent);
+    color: var(--text-primary);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    transition: opacity 0.2s, transform 0.2s;
+    display: inline-block;
+}
+
+.btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #4a4f58;
+}
+
+/* --- Підвал (Footer) --- */
+.site-footer {
+    margin-top: auto;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid rgba(220, 221, 222, 0.1);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* --- Адаптивність (Медіазапити для мобільних екранів) --- */
+@media (max-width: 900px) {
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .detail-layout {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .detail-img-wrapper {
+        flex: unset;
+        width: 100%;
+        max-width: 320px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+    .main-title {
+        font-size: 1.6rem;
+    }
+    .action-buttons {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+    }
+}
