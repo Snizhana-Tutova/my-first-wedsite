@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the border — Каталог книг</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">Beyond the border</a>
+            <nav class="nav-links">
+                <a href="#author">Про автора</a>
+                <a href="#contacts">Контакти</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="hero-section container">
+        <h1 class="main-title">КНИГИ, ЯКІ ВАРТО ПРОЧИТАТИ</h1>
+        <p class="subtitle">Тільки перевірені рекомендації у жанрах містики та фентезі.</p>
+    </section>
+
+    
+    <main class="books-section container">
+        <div class="books-grid">
+
+           
+            <a href="book1.html" class="book-card">
+                <div class="card-author-top">Забіне Шультер</div>
+                <div class="card-img-wrapper">
+                    <img src="photo1.jpg" alt="Темна епоха. Загроза" class="card-img">
+                </div>
+                <div class="card-title-bottom">Темна Епоха. Загроза</div>
+            </a>
+
+            
+            <a href="book2.html" class="book-card">
+                <div class="card-author-top">Забіне Шультер</div>
+                <div class="card-img-wrapper">
+                    <img src="photo2.jpg" alt="Темна епоха. Надія" class="card-img">
+                </div>
+                <div class="card-title-bottom">Темна Епоха. Надія</div>
+            </a>
+
+            
+            <a href="book3.html" class="book-card">
+                <div class="card-author-top">Стівен Кінг</div>
+                <div class="card-img-wrapper">
+                    <img src="photo3.jpg" alt="Аутсайдер" class="card-img">
+                </div>
+                <div class="card-title-bottom">Аутсайдер</div>
+            </a>
+
+            
+            <a href="book4.html" class="book-card">
+                <div class="card-author-top">Стівен Кінг</div>
+                <div class="card-img-wrapper">
+                    <img src="photo4.jpg" alt="Згодом" class="card-img">
+                </div>
+                <div class="card-title-bottom">Згодом</div>
+            </a>
+
+        </div>
+    </main>
+
+  
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Моя полиця. Всі права захищено.</p>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAyKaBpO5IY3Jp-B6--1YH0-YU70mNGzvU",
+    authDomain: "my-first-website-web.firebaseapp.com",
+    projectId: "my-first-website-web",
+    storageBucket: "my-first-website-web.firebasestorage.app",
+    messagingSenderId: "63578254001",
+    appId: "1:63578254001:web:bcd4b47c1bb8e05ab25090",
+    measurementId: "G-S9FGQW93HC"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+</body>
+</html>
